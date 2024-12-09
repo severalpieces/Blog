@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="/styles/main.css"/>
+    <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
     <div class="container">
@@ -17,8 +17,8 @@
           <small><%= post.date %></small>
           <p><%= post.content %></p>
           <small>By: <%= post.author %></small>
-          <a class="edit" href="/edit/<%= post.id %>">Edit</a>
-          <a class="delete" href="/delete/<%= post.id %>">Delete</a>
+          <a class="edit" href="/edit/<%= post._id %>">Edit</a>
+          <a class="delete" href="/delete/<%= post._id %>">Delete</a>
         </li>
         <% }); %>
       </ul>
