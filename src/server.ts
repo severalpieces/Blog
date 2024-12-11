@@ -2,13 +2,14 @@ import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import Article from "./models/article";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = 4000;
 
-mongoose.connect(
-  "mongodb+srv://admin_user:Iamadminuser@cluster0.o8kab.mongodb.net/blogDB?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(process.env.MONGO_URI);
 
 const post1 = new Article({
   title: "The Rise of Decentralized Finance",
